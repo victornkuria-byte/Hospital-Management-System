@@ -1,15 +1,14 @@
 public abstract class MedicalStaff extends Person implements Treatable {
-    private String department;
+    public String department;
 
-    public MedicalStaff(String name, int id, String department) {
-        super(name, id); 
-        this.department = department;
+    public MedicalStaff(String name, int id, String dept) {
+        super(name, id);
+        this.department = dept;
+        System.out.println("Creating a medical staff member..."); // extra print
     }
-
-    public String getDepartment() { return department; }
 
     @Override
     public void displayRole() {
-        System.out.println("Medical Staff ID: " + getId() + " | Dept: " + department);
+        System.out.println("ID: " + getId() + " Dept: " + department);
     }
 }

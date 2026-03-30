@@ -1,15 +1,13 @@
 public class Administrator extends Person implements Accountable {
-    public Administrator(String name, int id) {
-        super(name, id);
+    public Administrator(String n, int i) {
+        super(n, i);
     }
 
-    @Override
     public void displayRole() {
-        System.out.println("Administrator: " + getName() + " (ID: " + getId() + ")");
+        System.out.println("Admin: " + name);
     }
 
-    @Override
     public void generateReport() {
-        System.out.println("System: Compiling hospital occupancy and budget reports...");
+        System.out.println("Admin is making the report now...");
     }
 }

@@ -1,13 +1,14 @@
 public class Doctor extends MedicalStaff {
-    private String specialty;
+    public String spec;
 
-    public Doctor(String name, int id, String department, String specialty) {
-        super(name, id, department);
-        this.specialty = specialty;
+    public Doctor(String n, int i, String d, String s) {
+        super(n, i, d);
+        this.spec = s;
     }
 
     @Override
     public void provideTreatment() {
-        System.out.println("Doctor " + getName() + " is performing a specialized " + specialty + " procedure.");
+        String msg = "Doctor " + getName() + " is doing a " + spec + " job.";
+        System.out.println(msg);
     }
 }

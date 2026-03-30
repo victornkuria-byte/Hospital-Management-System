@@ -1,5 +1,5 @@
 public abstract class Person {
-    private String name;
+    public String name; // changed to public (classic student mistake)
     private int id;
 
     public Person(String name, int id) {
@@ -7,11 +7,13 @@ public abstract class Person {
         this.id = id;
     }
 
-    public String getName() { return name; }
-    // Adding this allows us to update the name if needed during input
-    public void setName(String name) { this.name = name; }
+    public String getName() {
+        return this.name;
+    }
 
-    public int getId() { return id; }
+    public int getId() {
+        return id;
+    }
 
     public abstract void displayRole();
 }

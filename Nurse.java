@@ -5,6 +5,6 @@ public class Nurse extends MedicalStaff {
 
     @Override
     public void provideTreatment() {
-        System.out.println("Nurse " + getName() + " is checking vitals and administering medication in " + getDepartment() + ".");
+        System.out.println("Nurse " + getName() + " is checking vitals in " + department);
     }
 }
